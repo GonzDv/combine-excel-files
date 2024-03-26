@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combine XLSX Files</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Combinar archivos excel</h1>
+      <div id="drop_zone">
+        <p>
+          Arrastra y suelta archivos aquí o haz clic para seleccionar archivos
+        </p>
+      </div>
+      <div class="container">
+        <form id="uploadForm" enctype="multipart/form-data">
+          <input type="file" id="xlsxFiles" name="xlsxFiles" accept=".xls,.xlsx" multiple />
+          <button class="btm-submit" type="submit" >Combinar</button>
+        </form>
+        <div id="result"></div>
+      </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='main.js') }}">
+      
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
